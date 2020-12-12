@@ -7,7 +7,7 @@ option(DB_DYNAMO "Use DynamoDB" OFF)
 
 project(dynamo-svc CXX)
 
-add_subdirectory(dynamo-svc)
+add_subdirectory(dynamo-svc-src)
 add_executable(dynamo-svc ${dynamo-svc_SRC})
 
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
@@ -16,10 +16,10 @@ set_target_properties(dynamo-svc PROPERTIES CXX_STANDARD 17)
 set_target_properties(dynamo-svc PROPERTIES CXX_STANDARD_REQUIRED ON)
 
 if (${CMAKE_VERSION} VERSION_GREATER "3.16.0")
-    target_precompile_headers(dynamo-svc PUBLIC dynamo-svc/vtspch.h)
+    target_precompile_headers(dynamo-svc PUBLIC dynamo-svc-src/vtspch.h)
 else ()
     include(cotire)
-    set_target_properties(dynamo-svc PROPERTIES COTIRE_CXX_PREFIX_HEADER_INIT "dynamo-svc/vtspch.h")
+    set_target_properties(dynamo-svc PROPERTIES COTIRE_CXX_PREFIX_HEADER_INIT "dynamo-svc-src/vtspch.h")
     set_target_properties(dynamo-svc PROPERTIES COTIRE_ADD_UNITY_BUILD FALSE)
     cotire(dynamo-svc)
 endif ()

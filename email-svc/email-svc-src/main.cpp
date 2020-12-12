@@ -66,6 +66,6 @@ void sqs_listener() {
 				std::cout << "Error: " << e.what() << "\n";
 			}			
 		}
-		Sleep(500);
+		sleep(500);
 	}
 }

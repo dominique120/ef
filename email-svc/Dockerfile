@@ -26,7 +26,7 @@ RUN mkdir /bin_vitanza
 
 RUN git clone https://github.com/dominique120/ef.git /usr/vts_work/ef && \
 	mkdir /usr/vts_work/ef/build && cd /usr/vts_work/ef/build && \
-	cmake -DDB_DYNAMO=ON /usr/vts_work/ef/email-svc && \
+	cmake /usr/vts_work/ef/email-svc && \
 	make && \
 	mv /usr/vts_work/ef/build/email-svc /bin_vitanza/email-svc && \
 	cp /usr/vts_work/ef/email-svc/config.json /bin_vitanza/config.json && \

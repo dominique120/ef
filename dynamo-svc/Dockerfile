@@ -25,7 +25,7 @@ RUN git clone https://github.com/nlohmann/json.git /usr/vts_work/json && \
 
 RUN mkdir /bin_vitanza
 	
-RUN git clone https://github.com/isil-tech-classroom/examen-final-dominique120.git /usr/vts_work/ef && \
+RUN git clone https://github.com/dominique120/ef.git /usr/vts_work/ef && \
 	mkdir /usr/vts_work/ef/build && cd /usr/vts_work/ef/build && \
 	cmake -DDB_DYNAMO=ON /usr/vts_work/ef/dynamo-svc && \
 	make && \

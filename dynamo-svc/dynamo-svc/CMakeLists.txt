@@ -1,4 +1,4 @@
-set(vts_SRC
+set(dynamo-svc_SRC
 	${CMAKE_CURRENT_LIST_DIR}/config.cpp
 	${CMAKE_CURRENT_LIST_DIR}/db_dynamo.cpp
 	${CMAKE_CURRENT_LIST_DIR}/main.cpp

@@ -6,7 +6,7 @@ set(CMAKE_DISABLE_IN_SOURCE_BUILD ON)
 
 project(email-svc CXX)
 
-add_subdirectory(email-svc)
+add_subdirectory(email-svc-src)
 add_executable(email-svc ${email-svc_SRC})
 
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
